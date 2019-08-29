@@ -9,18 +9,23 @@ namespace EquiposDeBeisbol
     class Jugador
     {
         public string Nombre { get; set; }
-        public string Numero { get; set; }
+        public int Numero { get; set; }
 
         public Jugador()
         {
             Nombre = "Sin Asignar";
-            Numero = "Sin Asignar";
+            Numero = 0;
         }
 
         public Jugador(string nombre)
         {
             Nombre = nombre;
-            Numero = "Sin Asignar";
+        }
+
+        public Jugador(string nombre, int numero)
+        {
+            Nombre = nombre;
+            Numero = numero;
         }
     }
 }

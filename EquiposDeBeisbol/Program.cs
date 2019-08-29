@@ -14,59 +14,45 @@ namespace EquiposDeBeisbol
 
             Equipo azul =
                 new Equipo("Azul");
+
+            azul.Entrenador = "Pedro";
+            azul.CiudadDeOrigen = "Ciudad Obregón";
+
+            azul.Jugadores.Add(new Jugador("Jugador 1", 18));
+            azul.Jugadores.Add(new Jugador("Jugador 2", 21));
+            azul.Jugadores.Add(new Jugador("Jugador 3", 32));
+            azul.Jugadores.Add(new Jugador("Jugador 4", 44));
+            azul.Jugadores.Add(new Jugador("Jugador 5", 52));
+            azul.Jugadores.Add(new Jugador("Jugador 6", 26));
+            azul.Jugadores.Add(new Jugador("Jugador 7", 75));
+            azul.Jugadores.Add(new Jugador("Jugador 8", 28));
+            azul.Jugadores.Add(new Jugador("Jugador 9", 39));
+
             Equipo negro =
                 new Equipo("Negro");
+            negro.Entrenador = "Juan";
+            negro.CiudadDeOrigen = "Mexicali";
+
+            negro.Jugadores.Add(new Jugador("Jugador 1", 23));
+            negro.Jugadores.Add(new Jugador("Jugador 2", 45));
+            negro.Jugadores.Add(new Jugador("Jugador 3", 86));
+            negro.Jugadores.Add(new Jugador("Jugador 4", 83));
+            negro.Jugadores.Add(new Jugador("Jugador 5", 13));
+            negro.Jugadores.Add(new Jugador("Jugador 6", 19));
+            negro.Jugadores.Add(new Jugador("Jugador 7", 41));
+            negro.Jugadores.Add(new Jugador("Jugador 8", 74));
+            negro.Jugadores.Add(new Jugador("Jugador 9", 54));
 
             equipos.Add(azul);
             equipos.Add(negro);
 
-            Jugador caro = new Jugador("Carolina");
-            Jugador ana = new Jugador("Ana");
-            Jugador josefina = new Jugador("Josefina");
-            Jugador eli = new Jugador("Eli");
-            Jugador maria = new Jugador("María");
-            Jugador karla = new Jugador("Karla");
-            Jugador blanca = new Jugador("Blanca");
-            Jugador dani = new Jugador("Daniela");
-            Jugador ale = new Jugador("Alejandra");
-
-            Jugador juan = new Jugador("Juan");
-            Jugador jose = new Jugador("José");
-            Jugador jesus = new Jugador("Jesús");
-            Jugador luis = new Jugador("Luis");
-            Jugador carlos = new Jugador("Carlos");
-            Jugador andres = new Jugador("Andrés");
-            Jugador rene = new Jugador("René");
-            Jugador fer = new Jugador("Fernando");
-            Jugador pablo = new Jugador("Pablo");
-
-            azul.Jugadoress.Add(caro);
-            azul.Jugadoress.Add(ana);
-            azul.Jugadoress.Add(josefina);
-            azul.Jugadoress.Add(eli);
-            azul.Jugadoress.Add(maria);
-            azul.Jugadoress.Add(karla);
-            azul.Jugadoress.Add(blanca);
-            azul.Jugadoress.Add(dani);
-            azul.Jugadoress.Add(ale);
-
-            negro.Jugadoress.Add(juan);
-            negro.Jugadoress.Add(jose);
-            negro.Jugadoress.Add(jesus);
-            negro.Jugadoress.Add(luis);
-            negro.Jugadoress.Add(carlos);
-            negro.Jugadoress.Add(andres);
-            negro.Jugadoress.Add(rene);
-            negro.Jugadoress.Add(fer);
-            negro.Jugadoress.Add(pablo);
-
-            foreach(Equipo equipo in equipos)
+            foreach (Equipo equipo in equipos)
             {
-                Console.WriteLine("Equipo: " + equipo.Nombre);
+                Console.WriteLine("Equipo: " + equipo.Nombre + " de " + equipo.CiudadDeOrigen);
                 Console.WriteLine("Lista de los jugadores: ");
-                foreach(Jugador jugador in equipo.Jugadoress)
+                foreach(Jugador jugador in equipo.Jugadores)
                 {
-                    Console.WriteLine("*" + jugador.Nombre);
+                    Console.WriteLine("*" + jugador.Nombre + " " + jugador.Numero);
                 }
             }
 

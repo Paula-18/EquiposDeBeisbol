@@ -11,24 +11,22 @@ namespace EquiposDeBeisbol
         public string Nombre { get; set; }
         public string CiudadDeOrigen { get; set; }
         public string Entrenador { get; set; }
-        public string Jugadores { get; set; }
-
-        public List<Jugador> Jugadoress { get; set; }
+        public List<Jugador> Jugadores { get; set; }
 
         public Equipo()
         {
-            Nombre = "Sin Asignar";
-            CiudadDeOrigen = "Sin Asignar";
-            Entrenador = "Sin Asignar";
-            Jugadores = "Sin Asignar";
+            Nombre = "Equipo Nuevo";
+            CiudadDeOrigen = "Sin Ciudad";
+            Entrenador = "Sin Entrenador";
+            Jugadores = new List<Jugador>();
         }
 
         public Equipo(string nombre)
         {
             Nombre = nombre;
-            CiudadDeOrigen = "Sin Asignar";
-            Entrenador = "Sin Asignar";
-            Jugadoress = new List<Jugador>();
+            CiudadDeOrigen = "Sin Ciudad";
+            Entrenador = "Sin Entrenador";
+            Jugadores = new List<Jugador>();
         }
     }
 }
